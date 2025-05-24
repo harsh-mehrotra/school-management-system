@@ -1,4 +1,4 @@
- 🏫 School Management System - DevOps Deployment
+# 🏫 School Management System - DevOps Deployment
 
 A full-fledged **School Management System** deployed using modern DevOps tooling. This project features a complete CI/CD-ready, containerized infrastructure for managing and deploying web applications at scale.
 
