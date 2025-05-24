@@ -1,0 +1,21 @@
+.gradientRounded{
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background:
+      linear-gradient(to right, #dbdbdb, #dbdbdb),
+      linear-gradient(to right, red, blue);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+  }
+
+
+
+  .btn{
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background:
+      linear-gradient(to right, white, white),
+      linear-gradient(to right, red, blue);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+  }

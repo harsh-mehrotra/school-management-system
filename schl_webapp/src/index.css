@@ -1,0 +1,39 @@
+@import "tailwindcss";
+/* * {
+  margin: 0 !important;
+  padding: 0 !important;
+} */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box; /* Ensures padding and borders don't affect element size */
+  background-image: url("/assets/image1.png");
+  background-repeat: no-repeat;
+  background-size: "cover";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

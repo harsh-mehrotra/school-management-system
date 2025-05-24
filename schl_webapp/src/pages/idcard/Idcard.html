@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+            <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Student ID Card</title>
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background: url('/schoolproject/school_project/schl_webapp/public/assets/idcard_bg.png') no-repeat center center/cover rgba(35, 23, 84, 0.12) ;
+                }
+                .id-card {
+                    width: 260px;
+                    height: 400px;
+                    background-color:#fdf8f8;
+                    color: rgb(12, 10, 10);
+                    text-align: center;
+                    font-family: Arial, sans-serif;
+                    position: relative;
+                    overflow: hidden;
+                    padding: 15px;
+                }
+                .curved-top-box{
+                    max-width: 120px;
+                    position: relative;
+                    top:-15px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    background: rgb(237,31,31);
+                    background: linear-gradient(0deg, rgba(237,31,31,1) 19%, rgba(135,18,18,1) 100%);
+                    border-radius: 0 0 10rem 10rem;
+                    min-height: 170px;
+                    max-height: 170px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: end;
+                }
+                .curved-top-box::before {
+                    content: "";
+                    position: absolute;
+                    top: 12px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 60px;
+                    height: 10px;
+                    background-color: white;
+                    border-radius: 10px;
+                }
+                .curved-bottom-box{
+                    position: relative;
+                    bottom: -15px;
+                    max-width: 120px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    background: rgb(237,31,31);
+                    background: linear-gradient(180deg, rgba(237,31,31,1) 19%, rgba(135,18,18,1) 100%);
+                    border-radius: 10rem 10rem 0 0;
+                    min-height: 140px;
+                    max-height: 140px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: end;
+                }
+                .logo {
+                    width: 40px;
+                    position: absolute;
+                    top: 20px;
+                    left: 10px;
+                }
+                .logo-right {
+                    right: 10px;
+                    left: auto;
+                }
+                .photo-container {
+                    width: 90px;
+                    height: 90px;
+                    background-color: white;
+                    border:5px solid #980A0A;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 40px auto 5px;
+                    padding: 5px;
+                }
+                .photo-container img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+                .info {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+                .qr-container {
+                     width: 90px;
+                    height: 90px;
+                    background-color: white;
+                    border:5px solid #980A0A;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 5px auto 50px;
+                    padding: 5px;
+                }
+                .qr-container img {
+                    width: 100%;
+                }
+                .side-text {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-90deg);
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                .side-left {
+                    left: -100px;
+                }
+                .side-right {
+                    right: -100px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="id-card">
+                <div class="curved-top-box">
+                    <div class="photo-container">
+                        <img src="${studentPhotoData.url}" alt="Student Photo">
+                    </div>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjjFKiiiDc1YAYJafBG74V_lpijH2ROsMeoA&s" class="logo" alt="School Logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjjFKiiiDc1YAYJafBG74V_lpijH2ROsMeoA&s" class="logo logo-right" alt="School Logo">
+                <div class="info">
+                    <p><strong>${name}</strong></p>
+                    <p>Class: ${className} ${section}</p>
+                    <p>Roll Number: ${rollNumber}</p>
+                </div>
+                <div class="curved-bottom-box">
+                    <div class="qr-container">
+                    <img src="${qrCodeDataUrl}" alt="QR Code">
+                </div>
+                </div>
+                <p class="side-text side-left">LUCKNOW PUBLIC SCHOOL</p>
+                <p class="side-text side-right">LUCKNOW PUBLIC SCHOOL</p>
+            </div>
+        </body>
+        </html>
+
+
+
+
+
+
+
+
+
