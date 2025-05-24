@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  adminapp:
+    build: ./adminapp
+    ports:
+      - "3001:80" # React via Nginx on port 80 inside container
+    restart: always
+
+  userapp:
+    build: ./userapp
+    ports:
+      - "3002:80"
+    restart: always
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      - NODE_ENV=production
+      # Add other env vars as needed
